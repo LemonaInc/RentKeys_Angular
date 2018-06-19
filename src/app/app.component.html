@@ -1,20 +1,236 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top mainNavbar" color-on-scroll="500">
+  <div class="container">
+    <div class="dropdown button-dropdown">
+      <div ngbDropdown>
+        <a class="dropdown-toggle" ngbDropdownToggle>
+            <span class="button-bar"></span>
+            <span class="button-bar"></span>
+            <span class="button-bar"></span>
+        </a>
+         <div ngbDropdownMenu>
+           <!-- <a class="dropdown-header">RentKeys</a> -->
+           <a class="dropdown-item" href="#">Sign In</a>
+           <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="#">List Your Space</a>
+           <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="#">Become a partner</a>
+           <div class="dropdown-divider"></div>
+           <a class="dropdown-item" href="#">About RentKeys</a>
+         </div>
+       </div>
+    </div>
+      <div class="navbar-translate">
+          <a class="navbar-brand" placement="bottom">
+            RentKeys
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+          </button>
+      </div>
+      <div class="collapse navbar-collapse navigationButtons">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="" target="_blank">
+                    <i class="now-ui-icons travel_info"></i>
+                    <p>How it works</p>
+                </a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="" target="_blank">
+                    <i class="now-ui-icons location_compass-05"></i>
+                    <p>Cities</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link btn btn-neutral" href="" target="_blank">
+                      <i class="now-ui-icons location_world"></i>
+                      <p>Get Started</p>
+                  </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link btn btn-neutral" href="" target="_blank">
+                    <i class="now-ui-icons objects_spaceship"></i>
+                    <p>List Your Space</p>
+                </a>
+            </li>
+
+              <li class="nav-item">
+                  <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Follow us on Twitter">
+                      <i class="fa fa-twitter"></i>
+                      <p class="d-lg-none d-xl-none">Twitter</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Like us on Facebook">
+                      <i class="fa fa-facebook-square"></i>
+                      <p class="d-lg-none d-xl-none">Facebook</p>
+                  </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="" target="_blank" data-original-title="Follow us on Instagram">
+                      <i class="fa fa-instagram"></i>
+                      <p class="d-lg-none d-xl-none">Instagram</p>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<!-- Navbar End -->
+
+<div class="page-header clear-filter" filter-color="orange">
+  <div class="page-header-image rellax-header" data-rellax-speed="-7" style="background-image: url('assets/img/workspace_1.jpg');">
+
+  </div>
+    <div class="container">
+        <div class="content-center">
+            <img class="headerLogo" src="assets/img/Rentkeys_Logo.png" alt="">
+            <!-- <h1 class="headerTitle">RentKeys</h1> -->
+          <h3 class="headerSecondaryText">Discover amazing office space to rent right now!</h3>
+        </div>
+        <div class='headerBox'>
+        </div>
+        <input class="citySearchInput form-control" placeholder="Where do you want to be?" type="text">
+         <input class="enterStartDateInput form-control datetimepicker" placeholder="Check In">
+
+        <input class="enterEndDateInput form-control" placeholder="Check Out" type="text">
+        <button class="headerSearchButton btn btn-primary btn-lg">Search</button>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<h2 class="headerText"> Workspace when you need it</h2>
+<p class="secondaryText">Choose from lots of unique office spaces to choosen from in cities worldwide choose an office space or shared office almost anywhere globally with RentKeys you can
+    discover spaces to rent per day or month.</p>
+
+<div>
+  <div class="secondaryImageLeft workspaceSeven">
+   <div class="secondaryImageRight workspaceTwo">
+
+</div>
+
+<h2 class="cityHeaderText headerText">Launching in cities along the coast</h2>
+
+<p class="citySecondaryText">Choose from lots of unique office spaces to choosen from in cities worldwide choose an office space or shared office almost anywhere globally with RentKeys you can
+  discover spaces to rent per day or month.</p>
+
+
+<!-- Portland -->
+  <div class="cityImage cityImagePortand" style="background-image: url('assets/img/portland.jpg');">
+  <div class="card">
+      <h2 class="headerText" >Portland </h2>
+    <ngb-tabset [justify]="'center'" class="text-center">
+        <ngb-tab >
+          <ng-template ngbTabTitle class="testSpace">
+            <i class="now-ui-icons objects_umbrella-13"></i> About
+          </ng-template>
+            <ng-template ngbTabContent>
+              <p>Discover portand, find unique, cozy and hipster places to work at.</p>
+            </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <i class="now-ui-icons shopping_cart-simple"></i> Spaces
+          </ng-template>
+            <ng-template ngbTabContent>
+                <p> Working from Portland is now easier then ever.</p>
+            </ng-template>
+        </ngb-tab>
+    </ngb-tabset>
+</div>
+
+
+<!-- SF -->
+
+<div class="cityImage cityImageSF" style="background-image: url('assets/img/san-francisco-2.jpg');">
+  <div class="card">
+    <h2 class="headerText" >San Francisco</h2>
+    <ngb-tabset [justify]="'center'" class="text-center">
+        <ngb-tab >
+          <ng-template ngbTabTitle class="testSpace">
+            <i class="now-ui-icons objects_umbrella-13"></i> About
+          </ng-template>
+            <ng-template ngbTabContent>
+              <p>Discover San Francisco, find unique, cozy and hipster places to work at.</p>
+            </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <i class="now-ui-icons shopping_cart-simple"></i> Spaces
+          </ng-template>
+            <ng-template ngbTabContent>
+                <p>Working from San Francisco is now easier then ever.</p>
+            </ng-template>
+        </ngb-tab>
+    </ngb-tabset>
+</div>
+</div>
+
+<!-- Seattle -->
+
+<div class="cityImage cityImageSeattle seattleCityImage">
+  <div class="card">
+    <h2 class="headerText" >Seattle </h2>
+    <ngb-tabset [justify]="'center'" class="text-center">
+        <ngb-tab >
+          <ng-template ngbTabTitle class="testSpace">
+            <i class="now-ui-icons objects_umbrella-13"></i> About
+          </ng-template>
+            <ng-template ngbTabContent>
+              <p>Discover Seattle, find unique, cozy and hipster places to work at.</p>
+            </ng-template>
+        </ngb-tab>
+        <ngb-tab>
+          <ng-template ngbTabTitle>
+            <i class="now-ui-icons shopping_cart-simple"></i> Spaces
+          </ng-template>
+            <ng-template ngbTabContent>
+                <p>Working from Seattle is now easier then ever.</p>
+            </ng-template>
+        </ngb-tab>
+    </ngb-tabset>
+</div>
+</div>
+
+<p>
+  <button class=" listSpaceButton btn btn-outline-primary">List Your Space</button>
+</p>
+
+<p> 2018 RentKeys Seattle WA </p>
+<!--
+<ngb-tabset type="pills" class="nav nav-pills nav-pills-primary justify-content-start tab-space nav-pills-just-icons">
+  <ngb-tab>
+    <ng-template ngbTabTitle>
+        <i class="fa fa-diamond"></i>
+    </ng-template>
+      <ng-template ngbTabContent>
+      </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+    <ng-template ngbTabTitle>
+        <i class="fa fa-thermometer-full"></i>
+    </ng-template>
+      <ng-template ngbTabContent>
+      </ng-template>
+  </ngb-tab>
+  <ngb-tab>
+      <ng-template ngbTabTitle>
+        <i class="fa fa-suitcase"></i>
+      </ng-template>
+      <ng-template ngbTabContent>
+      </ng-template>
+  </ngb-tab>
+  <ngb-tab [disabled]="true">
+      <ng-template ngbTabTitle>
+        <i class="fa fa-exclamation"></i>
+      </ng-template>
+      <ng-template ngbTabContent>
+      </ng-template>
+  </ngb-tab>
+</ngb-tabset> -->
+
 

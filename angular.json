@@ -23,7 +23,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "styles.scss",
+              "src/styles.css",
+              "src/assets/sass/now-ui-kit.scss",
+              "node_modules/font-awesome/css/font-awesome.css"
+
             ],
             "scripts": []
           },
